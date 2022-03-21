@@ -8,7 +8,7 @@ public class ParserTest {
 
     @Test
     public void parseTest(){
-        parser.setFileAddress("C:/Users/Atlas/IdeaProjects/TestTasks/TestTasksFlights/src/test/resources/ticketTest.json");
+        parser.setFileAddress("src/test/resources/ticketTest.json");
         Assertions.assertEquals("Москва", parser.parse().get(0).getOriginName());
         Assertions.assertEquals("Санкт-Петербург", parser.parse().get(0).getDestinationName());
     }
