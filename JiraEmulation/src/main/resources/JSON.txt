@@ -1,0 +1,8 @@
+{
+"taskName": "Новая тестовая задача",
+"taskDescription": "Описание задачи",
+"taskCategory": "Тестовые задачи",
+"priority": 2,
+"startTask": "2022-03-26",
+"deadline": "2022-03-30"
+}
