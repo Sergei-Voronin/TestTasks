@@ -1,0 +1,29 @@
+CREATE TABLE IF NOT EXISTS well(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(32) NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS equipment(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(32),
+    well_id INTEGER,
+    FOREIGN KEY (well_id) REFERENCES well(id)
+);
+
+INSERT INTO well (name)
+VALUES ( 'A001');
+INSERT INTO well (name)
+VALUES ( 'A002');
+INSERT INTO well (name)
+VALUES ( 'A003');
+
+INSERT INTO equipment (name, well_id)
+VALUES ( 'B001', 1);
+INSERT INTO equipment (name, well_id)
+VALUES ( 'B002', 2);
+INSERT INTO equipment (name, well_id)
+VALUES ( 'B003', 2);
+
+SELECT * FROM well 
+INNER JOIN equipment ON well.id = equipment.well_id;
+
